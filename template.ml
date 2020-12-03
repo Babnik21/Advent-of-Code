@@ -6,16 +6,21 @@ let out_file_2 = "day_2/day_2_2.out";;
 
 
 (* Import *)
-let () = 
+let read_file in_file =
+  let lines = ref [] in       (*ref na prazen seznam*)
   let ic = open_in in_file in
-  (* Uvozimo naše podatke iz .in datoteke *)
-  close_in ic;;
+  try
+    while true; do 
+      lines := int_of_string(input_line ic) :: !lines    (*seznam = naslednja vrstica + seznam, vsaka vrstica pretvorjena v int*)
+    done; !lines
+  with End_of_file -> 
+    close_in ic;
+    List.rev !lines ;;
 
 
 
-
-
-
+let solution_1 = 1
+let solution_2 = 2
 
 
 
