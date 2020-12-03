@@ -1,8 +1,9 @@
 open Printf
 
-let in_file = "day_2/day_2.in";;
-let out_file_1 = "day_2/day_2_1.out";;
-let out_file_2 = "day_2/day_2_2.out";;
+let day = "1"
+let in_file = "day_" ^ day ^ "/day_" ^ day ^ ".in";;
+let out_file_1 = "day_" ^ day ^ "/day_" ^ day ^"_1.out";;
+let out_file_2 = "day_" ^ day ^ "/day_" ^ day ^ "_2.out";;
 
 
 (* Import *)
