@@ -1,4 +1,7 @@
+#use "topfind"
+#require "str"
 open Printf
+open Str
 
 let day = "1"
 let in_file = "day_" ^ day ^ "/day_" ^ day ^ ".in";;
