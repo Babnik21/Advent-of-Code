@@ -36,6 +36,7 @@ let walk lst =
     | _ -> failwith "Napačen vnos"
   in acc lst 0 0 []
 
+(* Naloga 2 *)
 let walk_2 lst =
   let rec acc lst index count visited = match List.nth lst index with
     | ("acc", x) -> if List.nth_opt lst (index + 1) = None then (count + x, 1) 
