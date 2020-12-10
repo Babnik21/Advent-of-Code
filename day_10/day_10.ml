@@ -27,7 +27,7 @@ let count_diffs lst =
                     else helper rest ones threes x
     in helper lst 0 0 0
 
-(* Naloga 2 *)
+
 (* The following function would compute the result but it's not efficient enough. If we split our list into sublists however, it might work.
     We are splitting on each instance where 2 subsequent integers have a difference of 3, and then use the function on the sublists *)
 let count_list lst =
@@ -47,6 +47,7 @@ let razdeli lst =
                     else acc rest sublist x (current_lst @ [x])
   in acc lst [] 0 []
 
+(* Naloga 2 *)
 let count_ways lst =
   let rec acc lst prod = match lst with
     | [] -> prod
@@ -70,4 +71,4 @@ let () =
     close_out oc
   in 
   print_output (string_of_int solution_1) out_file_1;
-  (* print_output (string_of_int solution_2) out_file_2; *)
+  print_output (string_of_int solution_2) out_file_2;
